@@ -33,25 +33,25 @@ static void PORT_init(void);
 /* Clock initialization function */
 static void CLK_init(void)
 {
-    OSCCON1 = _OSCCON1_NOSC2_MASK 
-            | _OSCCON1_NOSC1_MASK;      /* HFINTOSC Oscillator */
-    
-    OSCFRQ = ~_OSCFREQ_HFFRQ_MASK;      /* Set HFFRQ to 1 MHz */
+    /* set HFINTOSC Oscillator */
+    OSCCON1bits.NOSC = 6;
+    /* set HFFRQ to 1 MHz */
+    OSCFRQbits.HFFRQ = 0;
 }
 
 /* PORT initialization function */
 static void PORT_init(void)
 {
     /* Set RE0 (LED) pin as output */
-    TRISE &= ~_TRISE_TRISE0_MASK;
+    TRISEbits.TRISE0 = 0;
     /* Set RE2 (button) pin as input*/
-    TRISE |= _TRISE_TRISE2_MASK;
+    TRISEbits.TRISE2 = 1;
     
     /* Enable weak pull-up for pin RE2 (button) */
-    WPUE |= _WPUE_WPUE2_MASK;
+    WPUEbits.WPUE2 = 1;
     
     /* Enable digital input buffer for pin RE2 (button) */ 
-    ANSELE &= ~_ANSELE_ANSELE2_MASK;
+    ANSELEbits.ANSELE2 = 0;
 }
 
 void main(void) {
@@ -61,13 +61,13 @@ void main(void) {
     
     while (1)
     {
-        if(PORTE & _PORTE_RE2_MASK)     /* Read the input pin value */
+        if(PORTEbits.RE2)     /* Read the input pin value */
         {
-            LATE |= _LATE_LATE0_MASK;   /* Turn off LED */ 
+            LATEbits.LATE0 = 1;   /* Turn off LED */ 
         }
         else
         {
-            LATE &= ~_LATE_LATE0_MASK;  /* Turn on LED */
+            LATEbits.LATE0 = 0;  /* Turn on LED */
         }
     }
 }
