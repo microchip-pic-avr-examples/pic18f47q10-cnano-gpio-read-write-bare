@@ -27,11 +27,11 @@
 
 #include <xc.h>
 
-static void CLK_init(void);
-static void PORT_init(void);
+static void CLK_Initialize(void);
+static void PORT_Initialize(void);
 
 /* Clock initialization function */
-static void CLK_init(void)
+static void CLK_Initialize(void)
 {
     /* set HFINTOSC Oscillator */
     OSCCON1bits.NOSC = 6;
@@ -40,7 +40,7 @@ static void CLK_init(void)
 }
 
 /* PORT initialization function */
-static void PORT_init(void)
+static void PORT_Initialize(void)
 {
     /* Set RE0 (LED) pin as output */
     TRISEbits.TRISE0 = 0;
@@ -56,8 +56,8 @@ static void PORT_init(void)
 
 void main(void) {
     
-    CLK_init();
-    PORT_init();
+    CLK_Initialize();
+    PORT_Initialize();
     
     while (1)
     {
