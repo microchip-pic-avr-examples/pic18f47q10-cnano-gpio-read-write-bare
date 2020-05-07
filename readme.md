@@ -74,4 +74,4 @@ Result:
 
 ## Summary 
 
-This project showcases how the General Purpose Input/Output pins on the PIC18-Q43 can be used as inputs and outputs in order to read an input value and drive the output high or low (to turn an LED on or off).
+This project showcases how the General Purpose Input/Output pins on the PIC18F47Q10 can be used as inputs and outputs in order to read an input value and drive the output high or low (to turn an LED on or off).
