@@ -13,7 +13,7 @@ The input pin is connected to a button and the output pin is connected to an LED
 
 ## Related Documentation
 
-- Technical Brief Link [(linkTBD)](http://www.microchip.com/)
+- [TB3284: Getting Started with GPIO on PIC18](https://www.microchip.com/wwwappnotes/appnotes.aspx?appnote=en1003275)
 - [PIC18-Q10 Product Family Page](https://www.microchip.com/design-centers/8-bit/pic-mcus/device-selection/pic18f-q10-product-family)
 - [PIC18F47Q10 Data Sheet](http://ww1.microchip.com/downloads/en/DeviceDoc/40002043D.pdf)
 - [PIC18F47Q10 Code Examples on GitHub](https://github.com/microchip-pic-avr-examples?q=pic18f47q10-cnano&type=&language=)
