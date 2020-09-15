@@ -5,7 +5,7 @@
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.mplabx.project.pic18f47q10-cnano-gpio-read-write-bare",
         "version": "1.0.5",
-        "displayName": "PIC18F47Q10 GPIO Read/Write",
+        "displayName": "GPIO Read/Write",
         "projectName": "pic18f47q10-cnano-gpio-read-write-bare",
         "shortDescription": "This project showcases how the General Purpose Input/Output pins on the PIC18F47Q10 can be used as inputs and outputs in order to read an input value and drive the output high or low (to turn an LED on or off).",
         "ide": {
